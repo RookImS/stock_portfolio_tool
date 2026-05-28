@@ -19,7 +19,7 @@ def portfolio_backtest_by_duration(portfolio:Portfolio, benchmark=None, duration
 
     ratio_str = ""
     for ticker, weight in portfolio.target_ratio.items():
-        ratio_str += f"{weight:.1f}:"
+        ratio_str += f"{weight:04.1f}:"
     ratio_str = ratio_str.rstrip(':')
     stats.loc[:, 'ratio'] = ratio_str
 
